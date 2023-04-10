@@ -12,7 +12,7 @@
     <title>Todoapp</title>
     <script src="./todoapp.js" defer></script>
 </head>
-<body class="bg-blue" style="background-color: rgb(183, 183, 192);" >
+<body class="bg-blue" style="background-color: rgb(173, 173, 241);" >
     
     <main class="container p-5 d-flex justify-content-center">
 
@@ -30,9 +30,15 @@
 <!-- todo input  -->
 
       <div class="my-3 d-flex align-item-center">
-        <input type="email"  class="form-control "  style="margin-right: 8px;" id="todoInput" placeholder="Your Todo">
+        <input type="email"  class="form-control "  style="margin-right: 8px;" id="todoInput" placeholder="Your Todo"/>
 
-        <button type="button" class="btn btn-primary" id="todoAddButton">Add</button>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-success" id="todoAddButton">Add</button>
+          <button type="button" class="btn btn-primary"id="todoDeleteButton" >Delete</button>
+          
+        </div>
+
+        
       </div>
 
       <!-- todo list  -->
@@ -40,8 +46,16 @@
       <div>
         <ul class="list-group" id="todoList">
            
-            <!-- <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <!-- <li class="list-group-item d-flex justify-content-between ">A second item
+<button type="button" class="btn btn-danger btn-sm " 
+id="todoRemoveButton"
+onclick="removeItem()">
+remove
+</button>
+            </li> -->
+            
+
+            <!-- <li class="list-group-item">A third item</li>
             <li class="list-group-item">A fourth item</li>
             <li class="list-group-item">And a fifth one</li> -->
           </ul>
